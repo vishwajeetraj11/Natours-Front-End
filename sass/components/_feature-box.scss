@@ -1,0 +1,40 @@
+.feature-box{
+
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform  0.3s;
+
+    @include respond(tab-port) {
+        padding: 2rem;
+        align-items: center;
+        // width: 75%;
+        margin: 0 auto;
+    }
+
+    @include respond(phone) {
+        width: 75%;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        display: inline-block;
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light , .8),
+        rgba( $color-primary-dark, .8));
+        -webkit-background-clip: text;
+        color: transparent;
+       
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    // &__text {
+
+    // }
+}
